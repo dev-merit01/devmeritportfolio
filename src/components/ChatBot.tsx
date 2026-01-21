@@ -16,8 +16,8 @@ const initialMessage: Message = {
   role: 'assistant',  content: "Hi! I'm Merit AI Assistant — I can speak on behalf of Merit. Ask me anything!",
 };
 
-// Read OpenAI API key from Vite env (or fallback). For production keep key server-side.
-const OPENAI_API_KEY = (import.meta.env.VITE_OPENAI_API_KEY as string) || (import.meta.env.OPENAI_API_KEY as string) || '';
+// Read OpenAI API key from Vite env only. For production keep key server-side.
+const OPENAI_API_KEY = (import.meta.env.VITE_OPENAI_API_KEY as string) || '';
 
 // Default profile text (preloaded knowledge about Merit). User can edit/save in the chat UI.
 const DEFAULT_PROFILE_TEXT = `You are an AI assistant representing Merit Ngorima, a final-year Telecommunications Engineering student, AI software developer, and broadcasting technology innovator based in Harare, Zimbabwe.
