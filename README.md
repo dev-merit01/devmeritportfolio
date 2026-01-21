@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# devmerit — Merit Ngorima Portfolio
 
-## Project info
+Personal portfolio and contact site for Merit Ngorima. Built with Vite + React + TypeScript and includes a small client-side AI chat assistant (Merit AI Assistant) and a contact form integrated with Web3Forms.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- Static portfolio sections: Hero, About, Skills, Projects, Hire, Contact
+- Contact form (Web3Forms integration)
+- Client-side chatbot powered by OpenAI (configurable via env)
+- Responsive design with Tailwind CSS
+- Reusable UI components under `src/components/ui`
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- Frontend: React, TypeScript, Vite
+- Styling: Tailwind CSS
+- Components: lucide-react, sonner (toasts)
+- Chatbot: OpenAI Chat Completions (client-side example)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Note: The chatbot demonstrates client-side integration. For production, keep API keys server-side and proxy requests.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+1. Install dependencies
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. Create a `.env` file in the project root with these variables (do NOT commit `.env`):
 
-Follow these steps:
+```env
+VITE_WEB3FORMS_KEY=your_web3forms_access_key
+VITE_OPENAI_API_KEY=your_openai_api_key
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Run the dev server
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open the site at `http://localhost:5173` (or the address shown by Vite).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Notes on Secrets and Deployment
 
-**Use GitHub Codespaces**
+- This repository's `.env` must never be committed. Use GitHub Secrets or a server-side endpoint to store API keys for production.
+- To secure the chatbot, implement a server-side proxy endpoint that signs requests to the OpenAI API.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## How the Chatbot Works (overview)
 
-## What technologies are used for this project?
+- The chatbot builds a system prompt from a preloaded profile about Merit and sends a Chat Completion request to OpenAI.
+- If no OpenAI key is present the component falls back to a simulated response.
 
-This project is built with:
+## Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+If you want to suggest changes or file issues, open a GitHub issue or PR in this repository.
 
-## How can I deploy this project?
+## License
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This project doesn't include a license file. Add one if you plan to open-source it.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
