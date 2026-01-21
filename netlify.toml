@@ -1,0 +1,16 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+# Add your env vars in Netlify UI instead of committing them here.
+# Example keys the site expects:
+# VITE_WEB3FORMS_KEY = "<your_web3forms_key>"
+# VITE_OPENAI_API_KEY = "<your_openai_key>"
+
+[context.production.environment]
+# production-specific environment variables can go here when set in the UI
+
+[plugins]
+# If you need Bun support you can add a plugin or run an install command in Netlify build settings.
