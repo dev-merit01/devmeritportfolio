@@ -54,7 +54,7 @@ const projects = [
     impact: '15+ hours/week saved, zero manual errors, real-time visibility',
     featured: false,
     image: '/consultancy.png',
-    liveUrl: 'https://consultancy-website-alpha.vercel.app/',
+    liveUrl: 'https://consultancy-l4uw.onrender.com/',
     videoUrl: 'https://youtube.com/watch?v=demo3',
     githubUrl: 'https://github.com/dev-merit01/consultancy-website.git',
   },
