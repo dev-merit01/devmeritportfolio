@@ -67,7 +67,7 @@ const projects = [
     impact: 'Increased online visibility, attracted potential customers, and facilitated lead generation through the contact form.',
     featured: false,
     image: '/kuiper.png',
-    liveUrl: 'https://starlink-resell-zim.vercel.app/',
+    liveUrl: 'https://starlink-kits.onrender.com',
     videoUrl: 'https://youtube.com/watch?v=demo3',
     githubUrl: 'https://github.com/dev-merit01/starlink-resell-website.git',
   },
